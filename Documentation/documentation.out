@@ -1,0 +1,23 @@
+\BOOKMARK [0][-]{chapter.1}{Analysis}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Preamble}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Research}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{In-depth explanation of the solver}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Object Oriented Programming Planning}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Code}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Code explanation}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Hierarchy Diagram}{chapter.2}% 8
+\BOOKMARK [0][-]{chapter.3}{Operation Example}{}% 9
+\BOOKMARK [0][-]{chapter.4}{System Testing}{}% 10
+\BOOKMARK [1][-]{section.4.1}{Fixing array out of bounds when mouse is outside window}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.2}{Diagnosing performance Issues regarding addition/subtraction of density}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.3}{Ensuring Brush Size and Simulation Time Step are within range}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.4}{Colour-coding}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.5}{UI}{chapter.4}% 15
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 16
+\BOOKMARK [1][-]{section.5.1}{Use}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.2}{Why I chose this Project Idea}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.3}{Prospects for the Future}{chapter.5}% 19
+\BOOKMARK [0][-]{chapter.6}{Appendices}{}% 20
+\BOOKMARK [1][-]{section.6.1}{Appendix A: Java Code}{chapter.6}% 21
+\BOOKMARK [1][-]{section.6.2}{Appendix B: JSON File}{chapter.6}% 22
+\BOOKMARK [1][-]{section.6.3}{Appendix C: GitHub}{chapter.6}% 23
