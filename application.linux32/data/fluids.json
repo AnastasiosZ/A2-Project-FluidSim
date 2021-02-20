@@ -1,0 +1,8 @@
+[
+    {"configuration":"O2 in O2", "diffusion":0.0000198, "viscosity":0.0000176},
+    {"configuration":"N2 in N2", "diffusion":0.0000189, "viscosity":0.0000204},
+    {"configuration":"C02 in C02", "diffusion":0.0000104, "viscosity":0.0000147},
+    {"configuration":"O2 in Air", "diffusion":0.0000178, "viscosity":0.0000182},
+    {"configuration":"N2 in Air", "diffusion":0.0000138, "viscosity":0.0000182},
+    {"configuration":"C02 in Air", "diffusion":0.0000236, "viscosity":0.0000182}    
+]
