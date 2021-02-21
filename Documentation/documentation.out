@@ -9,7 +9,7 @@
 \BOOKMARK [0][-]{chapter.3}{Operation Example}{}% 9
 \BOOKMARK [0][-]{chapter.4}{System Testing}{}% 10
 \BOOKMARK [1][-]{section.4.1}{Fixing array out of bounds when mouse is outside window}{chapter.4}% 11
-\BOOKMARK [1][-]{section.4.2}{Diagnosing performance Issues regarding addition/subtraction of density}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.2}{Diagnosing Performance Issues regarding addition/subtraction of density}{chapter.4}% 12
 \BOOKMARK [1][-]{section.4.3}{Ensuring Brush Size and Simulation Time Step are within range}{chapter.4}% 13
 \BOOKMARK [1][-]{section.4.4}{Colour-coding}{chapter.4}% 14
 \BOOKMARK [1][-]{section.4.5}{UI}{chapter.4}% 15

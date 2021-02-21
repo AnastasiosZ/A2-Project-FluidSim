@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.1.14)  20 FEB 2021 22:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.1.14)  21 FEB 2021 10:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -382,7 +382,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
-] (./documentation.toc)
+] (./documentation.toc
+Overfull \hbox (0.45323pt too wide) in paragraph at lines 12--12
+ [][] [][]\T1/cmr/m/n/12 Diagnosing Per-for-mance Is-sues re-gard-ing ad-di-tio
+n/-sub-trac-tion 
+ []
+
+)
 \tf@toc=\write4
 \openout4 = `documentation.toc'.
 
@@ -479,7 +485,7 @@ Underfull \vbox (badness 4353) has occurred while \output is active []
 
  [19]
 [20]
-<pics/Hierarchy.png, id=530, 2490.30376pt x 1706.375pt>
+<pics/Hierarchy.png, id=536, 2490.30376pt x 1706.375pt>
 File: pics/Hierarchy.png Graphic file (type png)
 <use pics/Hierarchy.png>
 Package pdftex.def Info: pics/Hierarchy.png  used on input line 452.
@@ -491,7 +497,7 @@ Package pdftex.def Info: pics/Hierarchy.png  used on input line 452.
 
 ]
 Chapter 3.
-<pics/0.png, id=541, 573.14125pt x 311.1625pt>
+<pics/0.png, id=547, 573.14125pt x 311.1625pt>
 File: pics/0.png Graphic file (type png)
 <use pics/0.png>
 Package pdftex.def Info: pics/0.png  used on input line 461.
@@ -500,7 +506,7 @@ Package pdftex.def Info: pics/0.png  used on input line 461.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23 <./pics/0.png>]
-<pics/blank.png, id=547, 762.85pt x 769.87625pt>
+<pics/blank.png, id=553, 762.85pt x 769.87625pt>
 File: pics/blank.png Graphic file (type png)
 <use pics/blank.png>
 Package pdftex.def Info: pics/blank.png  used on input line 469.
@@ -509,7 +515,7 @@ Package pdftex.def Info: pics/blank.png  used on input line 469.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24 <./pics/blank.png>]
-<pics/1.png, id=552, 735.74875pt x 769.87625pt>
+<pics/1.png, id=558, 735.74875pt x 769.87625pt>
 File: pics/1.png Graphic file (type png)
 <use pics/1.png>
 Package pdftex.def Info: pics/1.png  used on input line 476.
@@ -518,7 +524,7 @@ Package pdftex.def Info: pics/1.png  used on input line 476.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25 <./pics/1.png>]
-<pics/2.png, id=558, 758.835pt x 769.87625pt>
+<pics/2.png, id=564, 758.835pt x 769.87625pt>
 File: pics/2.png Graphic file (type png)
 <use pics/2.png>
 Package pdftex.def Info: pics/2.png  used on input line 483.
@@ -527,7 +533,7 @@ Package pdftex.def Info: pics/2.png  used on input line 483.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26 <./pics/2.png>]
-<pics/3.png, id=563, 789.95125pt x 769.87625pt>
+<pics/3.png, id=569, 789.95125pt x 769.87625pt>
 File: pics/3.png Graphic file (type png)
 <use pics/3.png>
 Package pdftex.def Info: pics/3.png  used on input line 490.
@@ -541,7 +547,7 @@ Overfull \hbox (4.97466pt too wide) in paragraph at lines 490--491
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27 <./pics/3.png>]
-<pics/4.png, id=568, 768.8725pt x 769.87625pt>
+<pics/4.png, id=574, 768.8725pt x 769.87625pt>
 File: pics/4.png Graphic file (type png)
 <use pics/4.png>
 Package pdftex.def Info: pics/4.png  used on input line 497.
@@ -550,7 +556,7 @@ Package pdftex.def Info: pics/4.png  used on input line 497.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28 <./pics/4.png>]
-<pics/5.png, id=573, 769.87625pt x 768.8725pt>
+<pics/5.png, id=579, 769.87625pt x 768.8725pt>
 File: pics/5.png Graphic file (type png)
 <use pics/5.png>
 Package pdftex.def Info: pics/5.png  used on input line 504.
@@ -559,7 +565,7 @@ Package pdftex.def Info: pics/5.png  used on input line 504.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [29 <./pics/5.png>]
-<pics/6.png, id=578, 762.85pt x 769.87625pt>
+<pics/6.png, id=584, 762.85pt x 769.87625pt>
 File: pics/6.png Graphic file (type png)
 <use pics/6.png>
 Package pdftex.def Info: pics/6.png  used on input line 511.
@@ -568,7 +574,7 @@ Package pdftex.def Info: pics/6.png  used on input line 511.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30 <./pics/6.png>]
-<pics/7.png, id=583, 835.12pt x 769.87625pt>
+<pics/7.png, id=589, 835.12pt x 769.87625pt>
 File: pics/7.png Graphic file (type png)
 <use pics/7.png>
 Package pdftex.def Info: pics/7.png  used on input line 519.
@@ -582,7 +588,7 @@ Overfull \hbox (27.55898pt too wide) in paragraph at lines 519--520
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31 <./pics/7.png>]
-<pics/8.png, id=589, 770.88pt x 769.87625pt>
+<pics/8.png, id=595, 770.88pt x 769.87625pt>
 File: pics/8.png Graphic file (type png)
 <use pics/8.png>
 Package pdftex.def Info: pics/8.png  used on input line 526.
@@ -591,7 +597,7 @@ Package pdftex.def Info: pics/8.png  used on input line 526.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [32 <./pics/8.png>]
-<pics/9.png, id=594, 770.88pt x 769.87625pt>
+<pics/9.png, id=600, 770.88pt x 769.87625pt>
 File: pics/9.png Graphic file (type png)
 <use pics/9.png>
 Package pdftex.def Info: pics/9.png  used on input line 533.
@@ -600,7 +606,7 @@ Package pdftex.def Info: pics/9.png  used on input line 533.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33 <./pics/9.png>]
-<pics/10.png, id=599, 723.70375pt x 769.87625pt>
+<pics/10.png, id=605, 723.70375pt x 769.87625pt>
 File: pics/10.png Graphic file (type png)
 <use pics/10.png>
 Package pdftex.def Info: pics/10.png  used on input line 540.
@@ -609,7 +615,7 @@ Package pdftex.def Info: pics/10.png  used on input line 540.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34 <./pics/10.png>]
-<pics/11.png, id=604, 646.415pt x 761.84625pt>
+<pics/11.png, id=610, 646.415pt x 761.84625pt>
 File: pics/11.png Graphic file (type png)
 <use pics/11.png>
 Package pdftex.def Info: pics/11.png  used on input line 547.
@@ -618,7 +624,7 @@ Package pdftex.def Info: pics/11.png  used on input line 547.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [35 <./pics/11.png>]
-<pics/12.png, id=609, 736.7525pt x 768.8725pt>
+<pics/12.png, id=615, 736.7525pt x 768.8725pt>
 File: pics/12.png Graphic file (type png)
 <use pics/12.png>
 Package pdftex.def Info: pics/12.png  used on input line 554.
@@ -627,7 +633,7 @@ Package pdftex.def Info: pics/12.png  used on input line 554.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36 <./pics/12.png>]
-<pics/13.png, id=614, 769.87625pt x 752.8125pt>
+<pics/13.png, id=621, 769.87625pt x 752.8125pt>
 File: pics/13.png Graphic file (type png)
 <use pics/13.png>
 Package pdftex.def Info: pics/13.png  used on input line 561.
@@ -636,7 +642,7 @@ Package pdftex.def Info: pics/13.png  used on input line 561.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [37 <./pics/13.png>]
-<pics/14.png, id=621, 763.85374pt x 769.87625pt>
+<pics/14.png, id=627, 763.85374pt x 769.87625pt>
 File: pics/14.png Graphic file (type png)
 <use pics/14.png>
 Package pdftex.def Info: pics/14.png  used on input line 568.
@@ -648,19 +654,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 575--576
 
  []
 
+[39
 
-Overfull \hbox (11.32893pt too wide) in paragraph at lines 588--588
-[]\T1/cmr/bx/n/17.28 Diagnosing per-for-mance Is-sues re-gard-ing ad-
- []
-
-
+]
 Underfull \hbox (badness 10000) in paragraph at lines 589--590
 
  []
 
-[39
 
-]
 Overfull \hbox (10.27042pt too wide) in paragraph at lines 592--593
 [][]\T1/cmtt/m/n/12 brush_size []\T1/cmr/m/n/12 is re-set to the cor-re-spond-i
 ng ac-cept-able ex-treme - [][]\T1/cmtt/m/n/12 max_brush_size
@@ -671,10 +672,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 607--608
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [40]
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 635--636
 
  []
@@ -767,38 +765,49 @@ ity":0.0000182}[]
 [55] [56
 
 ]
-Underfull \hbox (badness 5288) in paragraph at lines 1057--1058
-[]\T1/cmr/m/n/12 Fluid Sim-u-la-tion for Dum-mies, Michael Ash, blog post 2006
+Underfull \hbox (badness 10000) in paragraph at lines 1057--1058
+[]\T1/cmr/m/n/12 The code used to demo the solver by Jos Stam:
  []
 
 
-Overfull \hbox (7.67085pt too wide) in paragraph at lines 1059--1060
+Underfull \hbox (badness 10000) in paragraph at lines 1057--1058
+[]\T1/cmr/m/n/12 https://github.com/CFusion-zz/Real-Time-Fluid-Dynamics-for-
+ []
+
+
+Underfull \hbox (badness 4505) in paragraph at lines 1058--1059
+[]\T1/cmr/m/n/12 Fluid Sim-u-la-tion for Dum-mies, Michael Ash, blog post 2006.
+
+ []
+
+
+Overfull \hbox (7.67085pt too wide) in paragraph at lines 1060--1061
 []\T1/cmr/m/n/12 CC 132 Fluid Sim-u-la-tion, ([]https://github.com/CodingTrain/
 website/tree/ 
  []
 
 
-Overfull \hbox (98.18593pt too wide) in paragraph at lines 1059--1060
+Overfull \hbox (98.18593pt too wide) in paragraph at lines 1060--1061
 \T1/cmr/m/n/12 main/CodingChallenges/CC_132_FluidSimulation/Processing/CC_132_F
 luidSimulation[]) 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1062.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1063.
 [57]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1062.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1063.
  (./documentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1062.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1062.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1063.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1063.
 
 Package rerunfilecheck Info: File `documentation.out' has not changed.
-(rerunfilecheck)             Checksum: B02598A48368BF3A73E2FEA2A0C9BD26;1506.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1062.
+(rerunfilecheck)             Checksum: D7A7F128CA9376CBA2A476E35D486FFC;1506.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1063.
  ) 
 Here is how much of TeX's memory you used:
- 9433 strings out of 483183
- 134358 string characters out of 5966292
+ 9435 strings out of 483183
+ 134381 string characters out of 5966292
  598601 words of memory out of 5000000
- 23474 multiletter control sequences out of 15000+600000
+ 23475 multiletter control sequences out of 15000+600000
  549432 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  34i,7n,40p,1666b,1857s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -817,10 +826,10 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentation.pdf (57 pages, 2560481 bytes).
+Output written on documentation.pdf (57 pages, 2560877 bytes).
 PDF statistics:
- 1768 PDF objects out of 2073 (max. 8388607)
- 1247 compressed objects within 13 object streams
- 804 named destinations out of 1000 (max. 500000)
+ 1777 PDF objects out of 2073 (max. 8388607)
+ 1256 compressed objects within 13 object streams
+ 805 named destinations out of 1000 (max. 500000)
  270 words of extra memory for PDF output out of 10000 (max. 10000000)
 

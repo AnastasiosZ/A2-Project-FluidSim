@@ -45,7 +45,7 @@
 
 \chapter{Analysis}
 \section{Preamble}
-In the following documentation, I will explain the conception, creation and improvement of my Fluid Dynamics simulation. This project is heavily based on a paper by Jos Stam published in 2003 named "Real-Time Fluid Dynamics for Games" and this project would not be fruitful without it. I cannot claim that my project is an original idea and entirely self-thought, but only a derivative of said paper. My focus was implementing the mathematical solver proposed by the paper in a visual environment. To do this I used processing.js, which is a tool of simplification for creating visuals using Java. This decision was intentional, as I found that had I made my project in python, C++ and Java, it would've been unnecessarily difficult. The paper itself has code snippets in C and so a translation was required. Like in the preamble of the paper, it is to be made clear that the solver is not focused on accuracy, but speed and reliability by finding approximate solutions to the famous Navier-Stokes Equations:
+In the following documentation, I will explain the conception, creation and improvement of my Fluid Dynamics simulation. This project is heavily based on a paper by Jos Stam published in 2003 named "Real-Time Fluid Dynamics for Games"\cite{josrtfdg} and this project would not be fruitful without it. I cannot claim that my project is an original idea and entirely self-thought, but only a derivative of said paper. My focus was implementing the mathematical solver proposed by the paper in a visual environment. To do this I used processing.js, which is a tool of simplification for creating visuals using Java. This decision was intentional, as I found that had I made my project in python, C++ and Java, it would've been unnecessarily difficult. The paper itself has code snippets in C \cite{josccode} and so a translation was required. Like in the preamble of the paper, it is to be made clear that the solver is not focused on accuracy, but speed and reliability by finding approximate solutions to the famous Navier-Stokes Equations:
 
 \begin{equation*}\label{nseq:vel}
 	\dfrac{\partial u}{\partial t} = -(u\cdot \nabla)u + v{\nabla}^2u + f
@@ -66,8 +66,7 @@ The bottom equation formulates the density at each cell in the 1D density array.
 The similarity of the equations allows us to use the same functions used for the density solver, for the velocity vector field solver. The corresponding three terms in the top equation are the addition of forces, viscous diffusion and self-advection. A highlighted part of the solver is a function used to force the velocity to be mass conserving (\verb|Project()|), which is an important property of real life fluids that must be taken into consideration, otherwise the solver would be unstable and unrealistic. The reader will notice that the function \verb|SetBnd()| recurs frequently in the code. This aptly named function is used to take care of boundary conditions, essentially making sure that cells can't exchange values with the boundary cells in the grid. The literal purpose of this is to think the grid as a box from which no fluid can exit. A limitation of this solver, not that of processing power, but of accuracy is observable because simulated fluids dampen unrealistically quickly.
 
 \section{Object Oriented Programming Planning}
-In order to utilize the solver in the conventionally correct way, I create two files; the main file that oversees the simulation of the fluid, listens for key strokes etc, and the Fluid file, which contains some global variables and the Fluid class. The class Fluid contains the mathematical simulation of the fluid along with its rendering.
-
+In order to utilize the solver in the conventionally correct way, I create two files; the main file that oversees the simulation of the fluid, listens for key strokes etc, and the Fluid file, which contains the Fluid class. The class Fluid contains all the properties that are inherent to the fluid simulation and changing any one of them would technically be changing the fluid.
 
 
 \chapter{Code}
@@ -141,7 +140,7 @@ This code simply initializes the velocity and density fields grids. \verb|u| and
 		x[IX(N+1,N+1)] = 0.5*(x[IX(N,N+1)]+x[IX(N+1,N )]);
 	}
 \end{lstlisting} 
-\verb|SetBnd| is responsible for taking care of the boundary conditions, namely "mirroring" the value of \verb|float[] x| at the boundary conditions. This array is named x because it can be made to take the value of both the velocity and the density fields from the rest of the code. This is what the paper was referring to when it said that the solver takes advantage of the similarities between the two equations. \verb|step| simply calls the solver every time step |dt| and calls the functions \verb|DensStep()| and \verb|VelStep()|:
+\verb|SetBnd| is responsible for taking care of the boundary conditions, namely "mirroring" the value of \verb|float[] x| at the boundary conditions. This array is named x because it can be made to take the value of both the velocity and the density fields from the rest of the code. This is what the paper\cite{josrtfdg} was referring to when it said that the solver takes advantage of the similarities between the two equations. \verb|step| simply calls the solver every time step |dt| and calls the functions \verb|DensStep()| and \verb|VelStep()|:
 \begin{lstlisting}
 	  void DensStep (float[] x, float[] x0, float[] u, float[] v, float diff ){
 		Diffuse ( 0, x0, x, diff);
@@ -260,7 +259,7 @@ The third and final term on both the equations, meaning the advection and self-a
 	}
 \end{lstlisting}
 
-Having finished with the solver, only the rendering remains. The subroutine \verb|RenderD()| that isn't included in the paper is responsible for the rendering of the density field, which is the field visible to us, much like how we see the colour of the smoke, which is dependent on its concentration, rather than the velocities of the smoke particles.
+Having finished with the solver, only the rendering remains. The subroutine \verb|RenderD()| that isn't included in the paper\cite{josrtfdg} is responsible for the rendering of the density field, which is the field visible to us, much like how we see the colour of the smoke, which is dependent on its concentration, rather than the velocities of the smoke particles.
 \begin{lstlisting}
 	void RenderD(boolean dark, boolean code){
 		noStroke();
@@ -389,7 +388,7 @@ The following function handles erroneous values for the position of \verb|mouseX
 		GetFluid(choice);
 	}
 \end{lstlisting}
-To check if the user pressed left or right click, a function is needed. I use the built-in function \verb|mouseDragged| for reasons outlined in the System Testing chapter. This subroutine is called every time the mouse is dragged. Additionally, I am able to utilize \verb|mouseX,pmouseX| and the corresponding for Y to determine the direction in which the pointer is dragged, allowing me to trace it in the velocity vector field or velocity of the "background" fluid. 
+To check if the user pressed left or right click, a function is needed. I use the built-in function \verb|mouseDragged| for reasons outlined in the System Testing chapter. This subroutine is called every time the mouse is dragged. Additionally, I am able to utilize \verb|pmouseX,pmouseY| and the corresponding for Y to determine the direction in which the pointer is dragged, allowing me to trace it in the velocity vector field or velocity of the "background" fluid. 
 \begin{lstlisting}
 	void mouseDragged(){
 		
@@ -455,7 +454,7 @@ It is my hope that the following Diagram simplifies the perplexity of the progra
 
 
 \chapter{Operation Example}
-At the start of the program (.exe for Windows, executable for Linux), the user is met with the panel explaining the key bindings and the information of the UI:
+At the start of the program (.exe for Windows, shell for Linux), the user is met with the panel explaining the key bindings and the information of the UI:
 
 \begin{figure}[H]
 	\includegraphics[scale=0.5]{pics/0.png}
@@ -572,7 +571,7 @@ And of course, you can use colour-coded mode while not being in dark mode.
 Due to the nature of my program, there isn't a whole lot of testing required to make sure it is operational. The most important and error-prone part of the code is the solver, which is widely used and known to be correct. However, a few problems are outlined in the following sections. 
 
 \section{Fixing array out of bounds when mouse is outside window}
-This was the most major problem. As explained in the Code chapter, I added the \verb|ConstrainMouse| function to make sure that the solver receives non-erroneous values for the location of the density to be added. In order to be efficient I didn't write ad hoc checks for \verb|mouseX| and \verb|mouseY| - the variables containing the x and y coordinates of the mouse, correspondingly - instead i use a general value \verb|maxV| to take the value for both \verb|mouseX| and \verb|mouseY|. A selection is made to check if \verb|maxV| is excessive or negative and 0, because the boundary cells can't have a density:\\
+This was the most major problem. As explained in the Code chapter, I added the \verb|ConstrainMouse| function to make sure that the solver receives non-erroneous values for the location of the density to be added. In order to be efficient I didn't write ad hoc checks for \verb|mouseX| and \verb|mouseY| - the variables containing the x and y coordinates of the mouse, correspondingly - instead I use a general value \verb|val| to take the value for both \verb|mouseX| and \verb|mouseY|. A selection is made to check if \verb|val| is more than or equal to \verb|maxV| (found by diving the size of the window with the scale) or negative and 0 (because the boundary cells can't have a density) and its value is altered:\\
 \begin{lstlisting}
 	int ConstrainMouse(int maxV, int val){
 		if(val >= maxV){
@@ -585,7 +584,7 @@ This was the most major problem. As explained in the Code chapter, I added the \
 	}
 \end{lstlisting}
 
-\section{Diagnosing performance Issues regarding addition/subtraction of density}
+\section{Diagnosing Performance Issues regarding addition/subtraction of density}
 I tried to write a custom function that detects if the mouse is pressed and call it while the simulation is running. However I discovered that using the built-in function \verb|mouseDragged()| offered by the processing.js default library, the FPS significantly increased. This is due to the fact that the built-in function only is called when, in this case, the mouse is dragged, where the user-defined function would be called every iteration of the loop, most of the times being unnecessary. A limitation of this is that the mouse has to be dragged \emph{and} clicked to add density.\\
 
 \section{Ensuring Brush Size and Simulation Time Step are within range}
@@ -658,7 +657,7 @@ Additionally, I had to inverse the colours of the background and UI text every t
 \chapter{Evaluation}
 
 \section{Use}
-The real-time fluid dynamics solver has an unlimited number of uses: in the development of video games the simulation of particles and fluids is key to the gaming experience, some crucial applications such as simulating the flow of air around a building to see if it is structurally sound, check airoplanes are stable at high speeds. I could go on but the applications are endless. The reader can think of my project as an application of the solver. It doesn't add much functionality to the original program, but it is a preliminary attempt at visualizing fluid flow in another fluid, which we have said is very useful. There already exist programs that trivialize the extent of my program, yet they couldn't have been developed so much without being what my project is, a preliminary visualization tool, at some point. Apart from that, having conversed with my physics teacher, this program and possibly a development of it can be used to convey laws of fluid dynamics to students in high school, such as Diffusion, Stoke's Law and Pascal's Principle, all of which fall under Chemistry and Physics A-Level (and even IGCSE) syllabus. I would imagine an advanced version of this can model the flow of blood through arteries and veins in Biology. All are exciting applications of my project and easily implemented, as the solver will not be changed. I myself find that the visualization of concepts that is physically modifiable is a very good way to learn. 
+The real-time fluid dynamics solver has an unlimited number of uses: in the development of video games the simulation of particles and fluids is key to the gaming experience, some crucial applications such as simulating the flow of air around a building to see if it is structurally sound, check if aeroplanes are stable at high speeds etc. I could go on but the applications are endless. The reader can think of my project as an application of the solver. It doesn't add much functionality to the original program, but it is a preliminary attempt at visualizing fluid flow in another fluid, which is undoubtedly useful. There already exist programs that trivialize the extent of my program, yet they couldn't have been developed so much without being what my project is at some point: a preliminary visualization tool. Apart from that, having conversed with my physics teacher, this program and possibly a development of it can be used to convey laws of fluid dynamics to students in high school, such as Diffusion, Stoke's Law and Pascal's Principle, all of which fall under Chemistry and Physics A-Level (and even IGCSE) syllabus. I would imagine an advanced version of this can model the flow of blood through arteries and veins in Biology. All are exciting applications of my project and easily implemented, as the solver will not be changed. I myself find that the visualization of concepts that is physically modifiable is a very good way to learn. 
 
 
 
@@ -667,7 +666,7 @@ I am very interested in Physics and I plan on possibly following a career in com
 
 
 \section{Prospects for the Future}
-The natural extension of the program is to convert it into a 3D simulation. The paper by Jos Stam that I based this project on makes clear that whoever understands the code can extend it into three dimensions. A more useful modification would be, in my opinion, to add obstacles in the simulation window that similarly to the boundary cells, can't exchange values of velocity and density, mimicking collision of the fluid. These obstacles could represent arteries, a building and everything that isn't a fluid, specifically a rigid solid (one that can't be bent). I could try to write the program in the programming language it's meant to be written in, C++. This would make the simulation much faster because C++ is a lower level language than Java and Python, hence being more efficient, but unnecessarily difficult for the purposes of this project. Believe me, I tried writing it in C++ and I immediately regretted it.
+The natural extension of the program is to convert it into a 3D simulation. The paper by Jos Stam\cite{josrtfdg} that I based this project on makes clear that whoever understands the code can extend it into three dimensions. A more useful modification would be, in my opinion, to add obstacles in the simulation window that similarly to the boundary cells, can't exchange values of velocity and density, mimicking collision of the fluid. These obstacles could represent arteries, a building and everything that isn't a fluid, specifically a rigid solid (one that can't be bent). I could try to write the program in the programming language it's meant to be written in, C++. This would make the simulation much faster because C++ is a lower level language than Java and Python, hence being more efficient, but unnecessarily difficult for the purposes of this project. Believe me, I tried writing it in C++ and I immediately regretted it.
 
 
 
@@ -1054,7 +1053,8 @@ In order to avoid confusion, I attach a link to a GitHub repository containing a
 
 \begin{thebibliography}{9}
 	\bibitem{josrtfdg} Real-Time Fluid Dynamics for Games, Jos Stam, GDC 2003 Conference proceedings, 2003.
-	\bibitem{fsfd} Fluid Simulation for Dummies, Michael Ash, blog post 2006 (\href{https://mikeash.com/pyblog/fluid-simulation-for-dummies.html}{https://mikeash.com/pyblog/fluid-simulation-for-dummies.html}).
+	\bibitem{josccode} The code used to demo the solver by Jos Stam: \href{https://github.com/CFusion-zz/Real-Time-Fluid-Dynamics-for-Games/tree/master/code}{https://github.com/CFusion-zz/Real-Time-Fluid-Dynamics-for-Games/tree/master/code}
+	\bibitem{fsfd} Fluid Simulation for Dummies, Michael Ash, blog post 2006. (\href{https://mikeash.com/pyblog/fluid-simulation-for-dummies.html}{https://mikeash.com/pyblog/fluid-simulation-for-dummies.html}).
 	\bibitem{mikeaskmthesis} Simulation and Visualization of a 3D Fluid, Michael Ash, Master's Thesis 2005.
 	\bibitem{codingtrain132} CC 132 Fluid Simulation, (\href{https://github.com/CodingTrain/website/tree/main/CodingChallenges/CC_132_FluidSimulation/Processing/CC_132_FluidSimulation}{https://github.com/CodingTrain/website/tree/\\main/CodingChallenges/CC\_132\_FluidSimulation/Processing/CC\_132\_FluidSimulation})
 \end{thebibliography}
